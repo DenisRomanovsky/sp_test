@@ -7,15 +7,16 @@ RSpec.describe UrlDataStore do
   subject { described_class.new }
   let(:test_url) { 'some_site_url' }
   let(:test_ip) { '127.0.0.1' }
-  let(:printable_data) {
+  let(:printable_data) do
     [
       {
         caption: 'URLs by number of total visits:',
         data: [['some_site_url', 1]]
       },
-      {caption: 'URLs by number of unique visits:',
-       data:[['some_site_url', 1]]}]
-  }
+      { caption: 'URLs by number of unique visits:',
+        data: [['some_site_url', 1]] }
+    ]
+  end
 
   it 'can add new items' do
     subject.add(test_url, test_ip)

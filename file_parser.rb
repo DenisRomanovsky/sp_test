@@ -35,6 +35,7 @@ class FileParser
     File.foreach(pathname) do |line|
       url, ip = line.split(SPLIT_SYMBOL)
       raise 'File contains invalid data' unless url && ip
+
       data_storages.each do |data_storage|
         data_storage.add(url, ip)
       end

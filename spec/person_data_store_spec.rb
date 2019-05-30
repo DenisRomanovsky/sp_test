@@ -7,15 +7,16 @@ RSpec.describe PersonDataStore do
   subject { described_class.new }
   let(:test_url) { 'some_site_url' }
   let(:test_ip) { '127.0.0.1' }
-  let(:printable_data) {
+  let(:printable_data) do
     [
       {
         caption: 'Persons by number of total visits:',
         data: [[test_ip, 1]]
       },
-      {caption: 'Persons by number of unique visits:',
-       data:[[test_ip, 1]]}]
-  }
+      { caption: 'Persons by number of unique visits:',
+        data: [[test_ip, 1]] }
+    ]
+  end
 
   it 'can add new items' do
     subject.add(test_url, test_ip)
