@@ -5,7 +5,7 @@ require_relative('../printer')
 
 RSpec.describe Printer do
   let(:data_storage) { double('ds') }
-  let(:printable_caption) { [{caption: 'Custom caption', data: [['a', 'b']]}] }
+  let(:printable_caption) { [{ caption: 'Custom caption', data: [%w[a b]] }] }
 
   it 'prints caption and data' do
     allow(data_storage).to receive(:printable_data).and_return(printable_caption)
