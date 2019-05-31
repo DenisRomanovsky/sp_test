@@ -15,4 +15,4 @@ class Parser
   end
 end
 
-# LogParser.run
+# Parser.run
