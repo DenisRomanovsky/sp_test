@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
+require('pathname')
+
 class FileParser
-  attr_accessor :file_path, :data_storages, :pathname
+  attr_accessor :file_path, :data_stores, :pathname
 
   SPLIT_SYMBOL = ' '
 
-  def initialize(file_path, data_storages)
+  def initialize(file_path, data_stores)
     @file_path = file_path
-    @data_storages = data_storages
+    @data_stores = data_stores
   end
 
   def self.run(file_path, data_storages)
@@ -35,8 +37,8 @@ class FileParser
       url, ip = line.split(SPLIT_SYMBOL)
       raise 'File contains invalid data' unless url && ip
 
-      data_storages.each do |data_storage|
-        data_storage.add(url, ip)
+      data_stores.each do |data_store|
+        data_store.add(url, ip)
       end
     end
   end
