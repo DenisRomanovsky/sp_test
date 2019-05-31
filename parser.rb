@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_relative 'person_data_store'
-require_relative 'url_data_store'
-require_relative 'file_parser'
-require_relative 'printer'
+require_relative 'lib/file_parser'
+require_relative 'lib/printer'
+require_relative 'lib/data_stores/url_data_store'
+require_relative 'lib/data_stores/person_data_store'
 
-class LogParser
+class Parser
   DATA_STORAGES = [UrlDataStore, PersonDataStore].freeze
 
   def self.run

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative('../printer')
+require_relative('../../lib/printer')
 
 RSpec.describe Printer do
   let(:data_storage) { double('ds') }

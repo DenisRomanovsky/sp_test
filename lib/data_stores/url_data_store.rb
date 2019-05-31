@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
-require_relative 'data_store'
+class UrlDataStore
+  attr_reader :data
 
-class UrlDataStore < DataStore
   UrlData = Struct.new(:url, :hits, :unique_hits, :ips)
+
+  def initialize
+    @data = {}
+  end
 
   def add(url, ip)
     entry = data[url] || UrlData.new(url, 0, 0, [])

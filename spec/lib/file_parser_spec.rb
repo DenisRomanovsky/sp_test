@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative('../file_parser')
+require_relative('../../lib/file_parser')
 
 RSpec.describe FileParser do
   let(:file_path) { 'spec/fixtures/weblog_test.txt' }

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require_relative('../log_parser')
+require_relative('../parser')
 
-RSpec.describe LogParser do
+RSpec.describe Parser do
   let(:file_name) { 'some.file' }
 
   before do
