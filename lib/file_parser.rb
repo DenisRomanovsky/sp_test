@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require('pathname')
+require 'pathname'
 
 class FileParser
   attr_accessor :file_path, :data_stores, :pathname

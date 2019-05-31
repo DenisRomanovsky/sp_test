@@ -15,4 +15,4 @@ class Parser
   end
 end
 
-# Parser.run
+Parser.run if ARGV.first
