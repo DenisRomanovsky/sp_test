@@ -16,5 +16,8 @@ RSpec.describe LogParser do
   end
 
   it 'runs printer' do
+    allow(FileParser).to receive(:run)
+    expect(Printer).to receive(:run)
+    described_class.run
   end
 end

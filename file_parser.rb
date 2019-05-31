@@ -26,7 +26,6 @@ class FileParser
 
     @pathname = Pathname.new(file_path)
 
-    puts pathname.exist?
     raise 'Incorrect path: target is a folder' if pathname.directory?
     raise 'Incorrect path: no file found' unless pathname.exist?
   end
