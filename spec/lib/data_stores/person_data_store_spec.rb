@@ -11,9 +11,11 @@ RSpec.describe PersonDataStore do
     [
       {
         caption: 'Persons by number of total visits:',
+        suffix: 'visits',
         data: [[test_ip, 1]]
       },
       { caption: 'Persons by number of unique visits:',
+        suffix: 'unique visits',
         data: [[test_ip, 1]] }
     ]
   end

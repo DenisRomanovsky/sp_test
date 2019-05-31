@@ -25,10 +25,12 @@ class PersonDataStore
     [
       {
         caption: 'Persons by number of total visits:',
+        suffix: 'visits',
         data: person_by_hits
       },
       {
         caption: 'Persons by number of unique visits:',
+        suffix: 'unique visits',
         data: person_by_unique_hits
       }
     ]

@@ -25,10 +25,12 @@ class UrlDataStore
     [
       {
         caption: 'URLs by number of total visits:',
+        suffix: 'visits',
         data: urls_by_hits
       },
       {
         caption: 'URLs by number of unique visits:',
+        suffix: 'unique visits',
         data: urls_by_unique_hits
       }
     ]

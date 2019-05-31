@@ -22,13 +22,13 @@ class Printer
   def render_data_storage(data_storage)
     data_storage.printable_data.each do |data_batch|
       puts data_batch[:caption]
-      render_data_rows(data_batch)
+      render_data_rows(data_batch, data_batch[:suffix])
     end
   end
 
-  def render_data_rows(data_batch)
+  def render_data_rows(data_batch, suffix)
     data_batch[:data].each do |data_row|
-      puts "#{data_row.first} - #{data_row.last} visits"
+      puts "#{data_row.first} - #{data_row.last} #{suffix}"
     end
   end
 end

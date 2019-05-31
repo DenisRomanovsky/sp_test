@@ -11,9 +11,11 @@ RSpec.describe UrlDataStore do
     [
       {
         caption: 'URLs by number of total visits:',
+        suffix: 'visits',
         data: [['some_site_url', 1]]
       },
       { caption: 'URLs by number of unique visits:',
+        suffix: 'unique visits',
         data: [['some_site_url', 1]] }
     ]
   end
